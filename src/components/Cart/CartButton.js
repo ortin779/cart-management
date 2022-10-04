@@ -3,7 +3,7 @@ import { uiSliceActions } from '../../store/ui-slice';
 import classes from './CartButton.module.css';
 
 const CartButton = (props) => {
-  const totalItems = useSelector(state=>state.cart.totalItems)
+  const {items} = useSelector(state=>state.cart)
   const dispatch = useDispatch()
 
   const handleCartToggle = ()=>{
@@ -13,7 +13,7 @@ const CartButton = (props) => {
   return (
     <button className={classes.button} onClick={handleCartToggle}>
       <span>My Cart</span>
-      <span className={classes.badge}>{totalItems}</span>
+      <span className={classes.badge}>{items.length}</span>
     </button>
   );
 };
