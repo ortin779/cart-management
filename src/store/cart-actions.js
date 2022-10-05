@@ -11,7 +11,7 @@ export const sendCartData = (cart)=>{
 
         const sendRequest = async ()=>{
             const response = await fetch(
-                "https://react-cart-e1cbb-default-rtdb.firebaseio.com/cart.json",
+                process.env.REACT_APP_API_URL,
                 {
                 method:"PUT",
                 body:JSON.stringify(cart)
@@ -51,7 +51,7 @@ export const getCartData = ()=>{
 
         const sendRequest = async ()=>{
             const response = await fetch(
-                "https://react-cart-e1cbb-default-rtdb.firebaseio.com/cart.json",
+                process.env.REACT_APP_API_URL,
             )
 
             if(!response.ok){
