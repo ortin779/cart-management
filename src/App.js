@@ -4,7 +4,7 @@ import Cart from './components/Cart/Cart';
 import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 import Notification from './components/UI/notification/Notification';
-import { getCartData, sendCartData } from './store/cart-slice';
+import { getCartData, sendCartData } from './store/cart-actions';
 
 let initialState = true
 
