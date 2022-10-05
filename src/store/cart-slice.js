@@ -37,7 +37,7 @@ const cartSlice = createSlice({
         },
         setCartDetails:(state,action)=>{
             state.quantity = action.payload.quantity;
-            state.items = action.payload.items;
+            state.items = action.payload.items || [];
         }
     }
 })
